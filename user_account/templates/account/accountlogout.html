@@ -1,8 +1,6 @@
-{% extends 'home/index.html' %}
+{% extends 'home/index.html' %} {% block body%}
 
-{% block  body%}
+<p>You have Successfully Logged out</p>
+<a href="{% url 'user_account:accountlogin' %}"> click here to login</a>
 
-<p> You have uccessfully Logged out  </p>
-<a href = "{% url 'account:login' %}"> click here to login</a>
-        
 {% endblock body %}

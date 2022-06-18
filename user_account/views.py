@@ -4,15 +4,15 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
-def register(request):
+def registration(request):
     if request.method == 'POST':
         user_data = UserCreationForm(request.POST)
         if user_data.is_valid():
             user_data.save()
-            return redirect('account:regsuccessful')
+            return redirect('user_account:registrationsuccessful')
 
         else:
-            return redirect('account:regsuccessful')
+            return redirect('user_account:registrationsuccessful')
             
    
 
@@ -21,17 +21,17 @@ def register(request):
         'form' : UserCreationForm()
 
     }
-    return render(request, 'account/register.html', context)
+    return render(request, 'user_account/registration.html', context)
 
 
 
 
-def regsuccessful(request):
-    return render(request, 'account/reg_successful.html')
+def registrationsuccessful(request):
+    return render(request, 'user_account/registrationsuccessful.html')
 
-def login(request):
-    return render(request, 'account/login.html', )
+def accountlogin(request):
+    return render(request, 'user_account/accountlogin.html', )
 
-def logout(request):
-    return render(request, 'account/logout.html', )
+def accountlogout(request):
+    return render(request, 'user_account/accountlogout.html', )
 

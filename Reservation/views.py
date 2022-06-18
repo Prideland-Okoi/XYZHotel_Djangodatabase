@@ -5,7 +5,7 @@ from .models import Lodging
 
 # Create your views here.
 def booked(request):
-    return render(request, 'Booking/booked.html')
+    return render(request, 'Reservation/booked.html')
 
 def check(request):
     if request.method == 'POST':
@@ -20,10 +20,10 @@ def check(request):
         context = {
             'room_check' : room_check
         }
-        return render(request, 'Booking/room_checked.html', context)
+        return render(request, 'Reservation/room_checked.html', context)
 
 
-    return render(request, 'Booking/check.html')
+    return render(request, 'Reservation/check.html')
 
 def book(request):
     if request.method == 'POST':
@@ -37,7 +37,7 @@ def book(request):
         end_date = request.POST.get("end_date")
 
         
-        new_booking = Lodging(
+        new_Reservation = Lodging(
             full_name = full_name,
             email = email,
             occupation = occupation,
@@ -48,8 +48,8 @@ def book(request):
             end_date = end_date
         
         )
-        new_booking.save()
-        return redirect('Booking:booked')          
+        new_Reservation.save()
+        return redirect('Reservation:booked')          
 
 
-    return render(request, 'Booking/lodge_room.html',)
+    return render(request, 'Reservation/lodge_room.html',)

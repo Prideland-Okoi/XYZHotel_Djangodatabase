@@ -32,9 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'crispy_forms',
-    'Booking.apps.BookingConfig',
+    'Reservation.apps.ReservationConfig',
     'home.apps.HomeConfig',
-    'account.apps.AccountConfig',
+    'user_account.apps.user_accountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hotel.urls'
+ROOT_URLCONF = 'xyzhotel.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hotel.wsgi.application'
+WSGI_APPLICATION = 'xyzhotel.wsgi.application'
 
 
 # Database
@@ -127,4 +127,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-LOGIN_REDIRECT_URL = "home:hotel-home"
+LOGIN_REDIRECT_URL = "home:xyzhotel-home"
