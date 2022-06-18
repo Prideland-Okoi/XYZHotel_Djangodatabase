@@ -25,4 +25,4 @@ Edited on VS Code, Atom
 
 ## Appreciation Note
 Special thanks to Engr. Aniebiet Udoh, the oga patapata
-Aprreciating Saviour Bassey, Ihiechi Okwelle, Akinuuliola Akinbobola, Ikeys et al
+Appreciating Saviour Bassey, Ihiechi Okwelle, Akinuuliola Akinbobola, Ikeys et al
